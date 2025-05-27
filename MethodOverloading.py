@@ -20,3 +20,23 @@ p2.intro(3)
 
 p3 = C()
 p3.intro(5.0)
+
+#Real-life Example
+import math
+class Shape:
+    def area(self):
+        print("Calculating Area...")
+
+class Square(Shape):
+    def area(self, side):
+        print(f"Area of the square: {side **2}")
+
+class Rectangle(Shape):
+    def area(self, length, width):
+        print(f"Area of the rectangle: {length * width}")
+
+s = Square()
+s.area(6)
+
+r = Rectangle()
+r.area(5,4)
