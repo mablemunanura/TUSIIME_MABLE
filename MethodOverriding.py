@@ -1,20 +1,20 @@
-class Human:
+class A:
     def intro(self):
-        print("I am a human.")
+        print("I am super class A.")
 
-class Male(Human):
+class B(A):
     def intro(self):
-        print("I am male.")
+        print("I am child class B.")
 
-class Female(Human):
+class C(A):
     def intro(self):
-        print("I am female.")
+        print("I am child class C.")
 
-p1 = Human()
+p1 = A()
 p1.intro()
 
-p2 = Male()
+p2 = B()
 p2.intro()
 
-p3 = Female()
+p3 = C()
 p3.intro()
