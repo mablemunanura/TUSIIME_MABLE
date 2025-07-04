@@ -1,10 +1,12 @@
-from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 import random
+import os
 
-TOKEN : Final = '7999835293:AAGBNBqNk7OA8kh9qFUEFgjJYf_Eyr2Dcoc'
-BOT_USERNAME :Final = '@MableTusiimeBot'
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
 
 #Commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -19,6 +21,9 @@ def handle_response(text:str) -> str:
     
     if 'how are you' in processed:
         return 'I am doing well, thanks for asking.'
+    
+    if 'thank' in processed:
+        return "You're welcome."
     
     if 'bye' in processed:
         return 'Bye, enjoy your day.'
